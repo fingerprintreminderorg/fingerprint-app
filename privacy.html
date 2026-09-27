@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سياسة الخصوصية | Privacy Policy - منبه البصمة الذكي</title>
+  <meta name="description" content="سياسة الخصوصية الرسمية لتطبيق منبه البصمة الذكي (Fingerprint Reminder). حماية بيانات المستخدم، عدم جمع بصمات الأصابع الحيوية، وحرية حذف الحساب.">
+  
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .legal-container {
+      max-width: 900px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .legal-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .legal-header h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .legal-header .last-updated {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 99px;
+      background: rgba(0, 245, 160, 0.1);
+      color: var(--neon-accent);
+      font-size: 0.85rem;
+      border: 1px solid var(--border-subtle);
+    }
+    .legal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+    .legal-section {
+      margin-bottom: 32px;
+    }
+    .legal-section:last-child {
+      margin-bottom: 0;
+    }
+    .legal-section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--neon-accent);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .legal-section p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .legal-section ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 12px 0 16px;
+    }
+    .legal-section li {
+      position: relative;
+      padding-inline-start: 24px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+    .legal-section li::before {
+      content: "•";
+      position: absolute;
+      inset-inline-start: 6px;
+      color: var(--neon-accent);
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 1;
+      top: 0;
+    }
+    .callout-box {
+      background: rgba(0, 245, 160, 0.06);
+      border: 1px solid rgba(0, 245, 160, 0.3);
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      margin: 18px 0;
+      color: #fff;
+    }
+    .callout-box strong {
+      color: var(--neon-accent);
+    }
+    .danger-box {
+      background: rgba(255, 82, 82, 0.08);
+      border: 1px solid rgba(255, 82, 82, 0.35);
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      margin: 18px 0;
+      color: #fff;
+    }
+    .contact-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #002D26;
+      border: 1px solid var(--border-strong);
+      padding: 10px 18px;
+      border-radius: 99px;
+      color: var(--neon-accent);
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 8px;
+      transition: var(--transition);
+    }
+    .contact-badge:hover {
+      background: var(--neon-accent);
+      color: #002D26;
+      box-shadow: 0 4px 14px var(--neon-glow);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="logo.svg" alt="شعار منبه البصمة" class="brand-logo">
+        <div class="brand-title" data-ar="منبه البصمة" data-en="Fingerprint Reminder">منبه البصمة</div>
+      </a>
+      <div class="nav-actions">
+        <button id="langToggleBtn" class="lang-btn" onclick="toggleLanguage()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span id="langLabel">English</span>
+        </button>
+        <a href="index.html" class="btn-nav-download" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="legal-container">
+    <div class="legal-header">
+      <h1 data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</h1>
+      <div class="last-updated" data-ar="آخر تحديث: سبتمبر 2026" data-en="Last Updated: September 2026">آخر تحديث: سبتمبر 2026</div>
+    </div>
+
+    <div class="legal-card">
+      <!-- Section 1 -->
+      <section class="legal-section">
+        <h2 data-ar="1. مقدمة ونظرة عامة" data-en="1. Introduction & Overview">1. مقدمة ونظرة عامة</h2>
+        <p data-ar="نحن في <strong>تطبيق منبه البصمة الذكي</strong> (المشار إليه بـ 'التطبيق' أو 'نحن' أو الموقع fingerprintreminder.online) نلتزم التزاماً كاملاً بحماية خصوصيتك وأمان بياناتك. تشرح هذه السياسة كيفية جمع بياناتك واستخدامها وحمايتها عند استخدام تطبيق أندرويد وخدماتنا المرتبطة به." data-en="At <strong>Fingerprint Reminder</strong> ('the App', 'we', or fingerprintreminder.online), we are fully committed to protecting your privacy and securing your personal data. This policy explains how your information is collected, used, and safeguarded when using our Android app and related web services.">
+          نحن في <strong>تطبيق منبه البصمة الذكي</strong> (المشار إليه بـ 'التطبيق' أو 'نحن' أو الموقع fingerprintreminder.online) نلتزم التزاماً كاملاً بحماية خصوصيتك وأمان بياناتك. تشرح هذه السياسة كيفية جمع بياناتك واستخدامها وحمايتها عند استخدام تطبيق أندرويد وخدماتنا المرتبطة به.
+        </p>
+      </section>
+
+      <!-- Section 2: CRITICAL CLARIFICATION ABOUT BIOMETRIC FINGERPRINTS -->
+      <section class="legal-section">
+        <h2 data-ar="2. توضيح هام جداً بشأن 'بصمة الإصبع' الحيوية" data-en="2. Critical Clarification Regarding Biometric Fingerprints">2. توضيح هام جداً بشأن 'بصمة الإصبع' الحيوية</h2>
+        <div class="callout-box">
+          <p style="margin: 0;" data-ar="<strong>تطبيقنا هو أداة تذكير بمواعيد العمل:</strong> الاسم 'منبه البصمة' يشير حصراً إلى أجهزة تسجيل الحضور والانصراف الوظيفية في مقر عملك. <strong>التطبيق لا يقوم إطلاقاً بقراءة أو مسح أو تخزين أي بصمات أصابع حيوية أو بيومترية من هاتفك أو جسمك.</strong> التطبيق يعتمد فقط على مواعيد الساعات والدقائق التي يحددها المستخدم." data-en="<strong>Our app is a work shift schedule reminder tool:</strong> The name 'Fingerprint Reminder' exclusively refers to workplace biometric punch clocks used for employee attendance. <strong>The app NEVER accesses, reads, scans, or stores physical biological fingerprint data from your device or body.</strong> The app only processes time schedules (hours and minutes) configured by the user.">
+            <strong>تطبيقنا هو أداة تذكير بمواعيد العمل:</strong> الاسم 'منبه البصمة' يشير حصراً إلى أجهزة تسجيل الحضور والانصراف الوظيفية في مقر عملك. <strong>التطبيق لا يقوم إطلاقاً بقراءة أو مسح أو تخزين أي بصمات أصابع حيوية أو بيومترية من هاتفك أو جسمك.</strong> التطبيق يعتمد فقط على مواعيد الساعات والدقائق التي يحددها المستخدم.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 3: Data We Collect -->
+      <section class="legal-section">
+        <h2 data-ar="3. البيانات التي نقوم بجمعها" data-en="3. Information We Collect">3. البيانات التي نقوم بجمعها</h2>
+        <p data-ar="نجمع فقط الحد الأدنى الضروري من البيانات لتقديم خدمة الجدولة والتنبيه الدقيقة ومزامنة حسابك:" data-en="We collect only the strictly necessary information required to provide reliable scheduling, alarms, and account synchronization:">
+          نجمع فقط الحد الأدنى الضروري من البيانات لتقديم خدمة الجدولة والتنبيه الدقيقة ومزامنة حسابك:
+        </p>
+        <ul>
+          <li data-ar="<strong>بيانات الحساب:</strong> البريد الإلكتروني، الاسم الظاهر، والصورة الرمزية عند تسجيل الدخول بحساب Google أو إنشاء حساب بالبريد وكلمة المرور." data-en="<strong>Account Credentials:</strong> Email address, display name, and avatar picture when signing in with Google or creating an email/password account.">
+            <strong>بيانات الحساب:</strong> البريد الإلكتروني، الاسم الظاهر، والصورة الرمزية عند تسجيل الدخول بحساب Google أو إنشاء حساب بالبريد وكلمة المرور.
+          </li>
+          <li data-ar="<strong>جداول ومواعيد البصمات:</strong> مواعيد الورديات التي تضبطها (تاريخ الدخول، مواعيد بصمة الحضور، بصمة الخروج المؤقت، وبصمة الانصراف النهائي)، وحالة تأكيد البصمة أو تأجيل المنبه." data-en="<strong>Schedules & Punch Times:</strong> Shift dates and punch times you configure (first entry, OUT/IN punches, final departure), punch completion confirmations, and snooze timestamps.">
+            <strong>جداول ومواعيد البصمات:</strong> مواعيد الورديات التي تضبطها (تاريخ الدخول، مواعيد بصمة الحضور، بصمة الخروج المؤقت، وبصمة الانصراف النهائي)، وحالة تأكيد البصمة أو تأجيل المنبه.
+          </li>
+          <li data-ar="<strong>معرّف الجهاز العشوائي (Installation UUID):</strong> معرّف عشوائي يُنشأ محلياً عند تثبيت التطبيق ويُستخدم فقط لحماية الحساب (سياسة الجهاز النشط الواحد) ومنع استغلال الفترة التجريبية المجانية (60 يوماً). لا نجمع رقم IMEI أو أي معرّفات عتادية سرية." data-en="<strong>Anonymous Installation UUID:</strong> A random UUID generated locally upon app install, used strictly to enforce the single active device security policy and prevent trial ledger abuse. We do NOT collect device IMEI or hardware serial numbers.">
+            <strong>معرّف الجهاز العشوائي (Installation UUID):</strong> معرّف عشوائي يُنشأ محلياً عند تثبيت التطبيق ويُستخدم فقط لحماية الحساب (سياسة الجهاز النشط الواحد) ومنع استغلال الفترة التجريبية المجانية (60 يوماً). لا نجمع رقم IMEI أو أي معرّفات عتادية سرية.
+          </li>
+          <li data-ar="<strong>الملاحظات والاقتراحات:</strong> نص الرسائل، التقييم بالنجوم، والتصنيف عند قيامك بإرسال تقييم طوعي من داخل التطبيق." data-en="<strong>User Feedback & Ratings:</strong> Message content, star ratings, and category whenever you voluntarily submit in-app feedback.">
+            <strong>الملاحظات والاقتراحات:</strong> نص الرسائل، التقييم بالنجوم، والتصنيف عند قيامك بإرسال تقييم طوعي من داخل التطبيق.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 4: How We Use Information -->
+      <section class="legal-section">
+        <h2 data-ar="4. كيف نستخدم معلوماتك؟" data-en="4. How We Use Your Information">4. كيف نستخدم معلوماتك؟</h2>
+        <ul>
+          <li data-ar="<strong>تشغيل المنبهات بدقة:</strong> ضبط منبهات نظام أندرويد الدقيقة عبر <code>AlarmManager</code> وتشغيل شاشة التنبيه الكاملة والرنات لتنبيهك قبل موعد بصمتك." data-en="<strong>Precision Alarm Scheduling:</strong> Registering exact alarms with Android's <code>AlarmManager</code> to fire ringtones and full-screen alerts before your punch deadline.">
+            <strong>تشغيل المنبهات بدقة:</strong> ضبط منبهات نظام أندرويد الدقيقة عبر <code>AlarmManager</code> وتشغيل شاشة التنبيه الكاملة والرنات لتنبيهك قبل موعد بصمتك.
+          </li>
+          <li data-ar="<strong>المزامنة السحابية الاحتياطية:</strong> حفظ جداولك في قاعدة بيانات Supabase الآمنة لتتمكن من استرجاعها عند تسجيل الدخول على هاتفك الجديد." data-en="<strong>Secure Cloud Sync & Backup:</strong> Storing your shift schedules on secure Supabase infrastructure so you can restore them whenever reinstalling or logging in.">
+            <strong>المزامنة السحابية الاحتياطية:</strong> حفظ جداولك في قاعدة بيانات Supabase الآمنة لتتمكن من استرجاعها عند تسجيل الدخول على هاتفك الجديد.
+          </li>
+          <li data-ar="<strong>رسائل البريد الإلكتروني الخدمية:</strong> إرسال رسائل التحقق من البريد، رسائل إعادة تعيين كلمة المرور، ورسالة الترحيب عبر خدمة Resend. لا نرسل أي رسائل إعلانية أو رسائل مزعجة (Spam)." data-en="<strong>Transactional Service Emails:</strong> Sending verification emails, password resets, and welcome confirmations via Resend. We do not send marketing spam.">
+            <strong>رسائل البريد الإلكتروني الخدمية:</strong> إرسال رسائل التحقق من البريد، رسائل إعادة تعيين كلمة المرور، ورسالة الترحيب عبر خدمة Resend. لا نرسل أي رسائل إعلانية أو رسائل مزعجة (Spam).
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 5: Third-Party Services -->
+      <section class="legal-section">
+        <h2 data-ar="5. معالجو البيانات والخدمات الخارجية" data-en="5. Third-Party Service Providers">5. معالجو البيانات والخدمات الخارجية</h2>
+        <p data-ar="نستعين بخدمات بنية تحتية سحابية عالمية رائدة وموثوقة تتوافق مع معايير الأمان وGDPR:" data-en="We rely on industry-leading cloud infrastructure providers compliant with modern security and GDPR standards:">
+          نستعين بخدمات بنية تحتية سحابية عالمية رائدة وموثوقة تتوافق مع معايير الأمان وGDPR:
+        </p>
+        <ul>
+          <li data-ar="<strong>Supabase:</strong> لإدارة المصادقة الآمنة، وتخزين جداول المواعيد السحابية المشفرة مع تقنية Row Level Security (RLS)." data-en="<strong>Supabase:</strong> For secure user authentication and encrypted PostgreSQL cloud storage utilizing Row Level Security (RLS).">
+            <strong>Supabase:</strong> لإدارة المصادقة الآمنة، وتخزين جداول المواعيد السحابية المشفرة مع تقنية Row Level Security (RLS).
+          </li>
+          <li data-ar="<strong>Resend:</strong> لإرسال رسائل البريد الإلكتروني الخدمية المعاملاتية المرتبطة بنطاقنا المعتمد." data-en="<strong>Resend:</strong> For transactional email delivery under our verified custom domain.">
+            <strong>Resend:</strong> لإرسال رسائل البريد الإلكتروني الخدمية المعاملاتية المرتبطة بنطاقنا المعتمد.
+          </li>
+        </ul>
+        <p data-ar="<strong>نحن لا نبيع أو نؤجر أو نشارك أي بيانات للمستخدمين مع شركات الإعلانات أو أطراف ثالثة لأغراض تجارية.</strong>" data-en="<strong>We NEVER sell, rent, monetize, or trade your personal data with third-party advertisers or data brokers.</strong>">
+          <strong>نحن لا نبيع أو نؤجر أو نشارك أي بيانات للمستخدمين مع شركات الإعلانات أو أطراف ثالثة لأغراض تجارية.</strong>
+        </p>
+      </section>
+
+      <!-- Section 6: Data Deletion (Google Play Mandate) -->
+      <section class="legal-section">
+        <h2 data-ar="6. حق حذف البيانات والحساب نهائياً (Data Deletion)" data-en="6. User Rights & Permanent Account Deletion">6. حق حذف البيانات والحساب نهائياً (Data Deletion)</h2>
+        <div class="danger-box">
+          <p style="margin-bottom: 8px;" data-ar="<strong>حرية كاملة لحذف الحساب بضغطة زر:</strong>" data-en="<strong>One-Click Permanent Account Deletion:</strong>">
+            <strong>حرية كاملة لحذف الحساب بضغطة زر:</strong>
+          </p>
+          <p style="margin-bottom: 0;" data-ar="يمكنك في أي وقت حذف حسابك وكافة بياناتك نهائياً من خوادمنا عبر أحد الخيارين:" data-en="You have the right to permanently erase your account and all cloud data at any time via:">
+            يمكنك في أي وقت حذف حسابك وكافة بياناتك نهائياً من خوادمنا عبر أحد الخيارين:
+          </p>
+          <ul style="margin-top: 10px;">
+            <li data-ar="<strong>من داخل التطبيق مباشرة:</strong> افتح الإعدادات ⚙️ ➔ تبويب 'الحساب والأمان' ➔ اضغط على زر 'حذف الحساب نهائياً'." data-en="<strong>Directly In-App:</strong> Open Settings ⚙️ ➔ 'Account & Security' tab ➔ Tap 'Delete Account Permanently'.">
+              <strong>من داخل التطبيق مباشرة:</strong> افتح الإعدادات ⚙️ ➔ تبويب 'الحساب والأمان' ➔ اضغط على زر 'حذف الحساب نهائياً'.
+            </li>
+            <li data-ar="<strong>عبر البريد الإلكتروني:</strong> راسلنا على <a href='mailto:support@fingerprintreminder.online' style='color:#00F5A0;'>support@fingerprintreminder.online</a> من بريدك المسجل وسيتم مسح كافة سجلاتك فوراً." data-en="<strong>Via Support Email:</strong> Send a request to <a href='mailto:support@fingerprintreminder.online' style='color:#00F5A0;'>support@fingerprintreminder.online</a> from your registered email, and all records will be deleted immediately.">
+              <strong>عبر البريد الإلكتروني:</strong> راسلنا على <a href='mailto:support@fingerprintreminder.online' style='color:#00F5A0;'>support@fingerprintreminder.online</a> من بريدك المسجل وسيتم مسح كافة سجلاتك فوراً.
+            </li>
+          </ul>
+          <p style="margin: 8px 0 0; font-size: 0.9rem;" data-ar="عند حذف الحساب، تُمسح فوراً بيانات تسجيل الدخول، والملف الشخصي، وجميع الجداول والفعاليات المسجلة." data-en="Upon account deletion, all authentication credentials, personal profile, and all saved schedules/events are erased permanently from production databases.">
+            عند حذف الحساب، تُمسح فوراً بيانات تسجيل الدخول، والملف الشخصي، وجميع الجداول والفعاليات المسجلة.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 7: Permissions -->
+      <section class="legal-section">
+        <h2 data-ar="7. أذونات جهاز الأندرويد واستخداماتها" data-en="7. Android Device Permissions">7. أذونات جهاز الأندرويد واستخداماتها</h2>
+        <ul>
+          <li data-ar="<strong>SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM:</strong> لتمكين المنبه من إيقاظ الهاتف وإطلاق الصوت في الموعد المظبوط بدقة تامة حتى في وضع السكون (Doze Mode)." data-en="<strong>SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM:</strong> To allow exact wake-ups and ringtones at the precise minute, even in low-power Doze mode.">
+            <strong>SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM:</strong> لتمكين المنبه من إيقاظ الهاتف وإطلاق الصوت في الموعد المظبوط بدقة تامة حتى في وضع السكون (Doze Mode).
+          </li>
+          <li data-ar="<strong>POST_NOTIFICATIONS:</strong> لإظهار إشعارات التنبيه المباشرة، وأزرار التأكيد والتأجيل السريع." data-en="<strong>POST_NOTIFICATIONS:</strong> To post heads-up alerts with quick snooze and punch-completion actions.">
+            <strong>POST_NOTIFICATIONS:</strong> لإظهار إشعارات التنبيه المباشرة، وأزرار التأكيد والتأجيل السريع.
+          </li>
+          <li data-ar="<strong>VIBRATE:</strong> لتشغيل الاهتزاز مع نغمات التنبيه لضمان عدم تفويت الموعد في الأماكن الصاخبة." data-en="<strong>VIBRATE:</strong> To trigger vibration alongside alarm tones in noisy environments.">
+            <strong>VIBRATE:</strong> لتشغيل الاهتزاز مع نغمات التنبيه لضمان عدم تفويت الموعد في الأماكن الصاخبة.
+          </li>
+          <li data-ar="<strong>RECEIVE_BOOT_COMPLETED:</strong> لإعادة جدولة منبهاتك تلقائياً عند إعادة تشغيل هاتفك حتى لا يفوتك أي موعد بعد فتح الجهاز." data-en="<strong>RECEIVE_BOOT_COMPLETED:</strong> To automatically restore and reschedule your alarms whenever your phone restarts.">
+            <strong>RECEIVE_BOOT_COMPLETED:</strong> لإعادة جدولة منبهاتك تلقائياً عند إعادة تشغيل هاتفك حتى لا يفوتك أي موعد بعد فتح الجهاز.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 8: Children's Privacy -->
+      <section class="legal-section">
+        <h2 data-ar="8. خصوصية الأطفال" data-en="8. Children's Privacy">8. خصوصية الأطفال</h2>
+        <p data-ar="تطبيق منبه البصمة مخصص للموظفين والمهنيين في بيئة العمل، ولا يوجه خدماته للأطفال دون سن 13 عاماً، ولا نجمع عمداً أي بيانات عن الأطفال." data-en="Fingerprint Reminder is designed for working professionals and does not target children under the age of 13. We do not knowingly collect personal information from children.">
+          تطبيق منبه البصمة مخصص للموظفين والمهنيين في بيئة العمل، ولا يوجه خدماته للأطفال دون سن 13 عاماً، ولا نجمع عمداً أي بيانات عن الأطفال.
+        </p>
+      </section>
+
+      <!-- Section 9: Contact -->
+      <section class="legal-section">
+        <h2 data-ar="9. التواصل والاستفسارات" data-en="9. Contact & Inquiries">9. التواصل والاستفسارات</h2>
+        <p data-ar="إذا كان لديك أي سؤال أو استفسار حول سياسة الخصوصية أو إدارة بياناتك، يمكنك التواصل معنا مباشرة:" data-en="If you have any questions, inquiries, or requests regarding this Privacy Policy or your data, reach out directly:">
+          إذا كان لديك أي سؤال أو استفسار حول سياسة الخصوصية أو إدارة بياناتك، يمكنك التواصل معنا مباشرة:
+        </p>
+        <a href="mailto:support@fingerprintreminder.online" class="contact-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>support@fingerprintreminder.online</span>
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <img src="logo.svg" style="width:26px;height:26px;border-radius:6px;" alt="logo">
+        <span>© 2026 fingerprintreminder.online - جميع الحقوق محفوظة</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="terms.html" data-ar="شروط الاستخدام" data-en="Terms of Service">شروط الاستخدام</a>
+        <a href="privacy.html" style="color:var(--neon-accent);" data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let currentLang = 'ar';
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      applyLanguage(currentLang);
+    }
+
+    function applyLanguage(lang) {
+      const isArabic = lang === 'ar';
+      document.documentElement.lang = isArabic ? 'ar' : 'en';
+      document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+      document.body.classList.toggle('ltr', !isArabic);
+
+      document.getElementById('langLabel').textContent = isArabic ? 'English' : 'عربي';
+
+      document.querySelectorAll('[data-ar]').forEach(el => {
+        const text = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+        if (text) {
+          if (text.includes('<') && text.includes('>')) {
+            el.innerHTML = text;
+          } else {
+            el.textContent = text;
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>

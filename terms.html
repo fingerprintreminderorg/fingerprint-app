@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شروط الاستخدام | Terms of Service - منبه البصمة الذكي</title>
+  <meta name="description" content="شروط وأحكام استخدام تطبيق منبه البصمة الذكي (Fingerprint Reminder). حقوق المستخدم، الالتزامات، إخلاء المسؤولية، وشروط الاشتراك.">
+  
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .legal-container {
+      max-width: 900px;
+      margin: 40px auto 80px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .legal-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .legal-header h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .legal-header .last-updated {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 99px;
+      background: rgba(0, 245, 160, 0.1);
+      color: var(--neon-accent);
+      font-size: 0.85rem;
+      border: 1px solid var(--border-subtle);
+    }
+    .legal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+    .legal-section {
+      margin-bottom: 32px;
+    }
+    .legal-section:last-child {
+      margin-bottom: 0;
+    }
+    .legal-section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--neon-accent);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .legal-section p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .legal-section ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 12px 0 16px;
+    }
+    .legal-section li {
+      position: relative;
+      padding-inline-start: 24px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+    .legal-section li::before {
+      content: "•";
+      position: absolute;
+      inset-inline-start: 6px;
+      color: var(--neon-accent);
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 1;
+      top: 0;
+    }
+    .callout-box {
+      background: rgba(0, 245, 160, 0.06);
+      border: 1px solid rgba(0, 245, 160, 0.3);
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      margin: 18px 0;
+      color: #fff;
+    }
+    .callout-box strong {
+      color: var(--neon-accent);
+    }
+    .warning-box {
+      background: rgba(255, 179, 0, 0.08);
+      border: 1px solid rgba(255, 179, 0, 0.35);
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      margin: 18px 0;
+      color: #fff;
+    }
+    .warning-box strong {
+      color: var(--warning);
+    }
+    .contact-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #002D26;
+      border: 1px solid var(--border-strong);
+      padding: 10px 18px;
+      border-radius: 99px;
+      color: var(--neon-accent);
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 8px;
+      transition: var(--transition);
+    }
+    .contact-badge:hover {
+      background: var(--neon-accent);
+      color: #002D26;
+      box-shadow: 0 4px 14px var(--neon-glow);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="logo.svg" alt="شعار منبه البصمة" class="brand-logo">
+        <div class="brand-title" data-ar="منبه البصمة" data-en="Fingerprint Reminder">منبه البصمة</div>
+      </a>
+      <div class="nav-actions">
+        <button id="langToggleBtn" class="lang-btn" onclick="toggleLanguage()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span id="langLabel">English</span>
+        </button>
+        <a href="index.html" class="btn-nav-download" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="legal-container">
+    <div class="legal-header">
+      <h1 data-ar="شروط وأحكام الاستخدام" data-en="Terms of Service">شروط وأحكام الاستخدام</h1>
+      <div class="last-updated" data-ar="آخر تحديث: سبتمبر 2026" data-en="Last Updated: September 2026">آخر تحديث: سبتمبر 2026</div>
+    </div>
+
+    <div class="legal-card">
+      <!-- Section 1: Acceptance -->
+      <section class="legal-section">
+        <h2 data-ar="1. قبول الشروط" data-en="1. Acceptance of Terms">1. قبول الشروط</h2>
+        <p data-ar="بتنزيلك أو تثبيتك أو استخدامك لتطبيق <strong>منبه البصمة الذكي (Fingerprint Reminder)</strong> أو موقعنا الإلكتروني fingerprintreminder.online، فإنك تقر بأنك قد قرأت وفهمت ووافقت على الالتزام بهذه الشروط والأحكام وبسياسة الخصوصية الخاصة بنا. إذا كنت لا توافق على هذه الشروط، يرجى التوقف فوراً عن استخدام التطبيق." data-en="By downloading, installing, accessing, or using <strong>Fingerprint Reminder</strong> or our website fingerprintreminder.online, you acknowledge that you have read, understood, and agreed to be bound by these Terms of Service and our Privacy Policy. If you do not agree, please discontinue using the application immediately.">
+          بتنزيلك أو تثبيتك أو استخدامك لتطبيق <strong>منبه البصمة الذكي (Fingerprint Reminder)</strong> أو موقعنا الإلكتروني fingerprintreminder.online، فإنك تقر بأنك قد قرأت وفهمت ووافقت على الالتزام بهذه الشروط والأحكام وبسياسة الخصوصية الخاصة بنا. إذا كنت لا توافق على هذه الشروط، يرجى التوقف فوراً عن استخدام التطبيق.
+        </p>
+      </section>
+
+      <!-- Section 2: Description of Service -->
+      <section class="legal-section">
+        <h2 data-ar="2. وصف الخدمة وطبيعة التطبيق" data-en="2. Description of the Service">2. وصف الخدمة وطبيعة التطبيق</h2>
+        <p data-ar="تطبيق منبه البصمة الذكي هو أداة إنتاجية مساعدة مخصصة لمساعدة الموظفين على جدولة وتذكير أنفسهم بمواعيد الحضور والانصراف الوظيفية وفق أنظمة الدوام المتنوعة (مثل ورديات 8-2، 8-3، 9-3، 10-5، 18-6، 24-6). يوفر التطبيق منبهات دقيقة عبر النظام، مزامنة سحابية، وتنبيهات صوتية واهتزازية." data-en="Fingerprint Reminder is a productivity utility designed to assist employees in scheduling and receiving timely alarm reminders for their workplace punch clock attendance and departure times across various work shifts (such as 8-2, 8-3, 9-3, 10-5, 18-6, 24-6). The app provides exact system alarms, cloud synchronization, audio ringtones, and vibration alerts.">
+          تطبيق منبه البصمة الذكي هو أداة إنتاجية مساعدة مخصصة لمساعدة الموظفين على جدولة وتذكير أنفسهم بمواعيد الحضور والانصراف الوظيفية وفق أنظمة الدوام المتنوعة (مثل ورديات 8-2، 8-3، 9-3، 10-5، 18-6، 24-6). يوفر التطبيق منبهات دقيقة عبر النظام، مزامنة سحابية، وتنبيهات صوتية واهتزازية.
+        </p>
+      </section>
+
+      <!-- Section 3: User Responsibilities & Device Settings -->
+      <section class="legal-section">
+        <h2 data-ar="3. مسؤوليات المستخدم وإعدادات الهاتف" data-en="3. User Responsibilities & Device Settings">3. مسؤوليات المستخدم وإعدادات الهاتف</h2>
+        <div class="warning-box">
+          <p style="margin-bottom: 8px;" data-ar="<strong>تنبيه هام حول عمل المنبهات في خلفية أندرويد:</strong>" data-en="<strong>Important Notice on Android Background Alarms:</strong>">
+            <strong>تنبيه هام حول عمل المنبهات في خلفية أندرويد:</strong>
+          </p>
+          <p style="margin-bottom: 0;" data-ar="لضمان عمل المنبهات والرنات في موعدها المحدد بدقة تامة، يلتزم المستخدم بالتالي:" data-en="To guarantee that alarms and ringtones fire accurately at their scheduled times, the user agrees to:">
+            لضمان عمل المنبهات والرنات في موعدها المحدد بدقة تامة، يلتزم المستخدم بالتالي:
+          </p>
+          <ul style="margin-top: 10px;">
+            <li data-ar="منح إذن المنبهات الدقيقة (Exact Alarms) في إعدادات النظام." data-en="Grant Exact Alarms permission in Android system settings.">
+              منح إذن المنبهات الدقيقة (Exact Alarms) في إعدادات النظام.
+            </li>
+            <li data-ar="تعطيل 'تحسين استهلاك البطارية' (Battery Optimization / App Killer) لتطبيق منبه البصمة على أجهزة Xiaomi, Huawei, Samsung, Oppo وغيرها لضمان عدم إغلاق التطبيق قسراً." data-en="Disable battery optimization restrictions for the app on OEM manufacturers (Xiaomi, Huawei, Samsung, Oppo, etc.) to prevent aggressive background killing.">
+              تعطيل 'تحسين استهلاك البطارية' (Battery Optimization / App Killer) لتطبيق منبه البصمة على أجهزة Xiaomi, Huawei, Samsung, Oppo وغيرها لضمان عدم إغلاق التطبيق قسراً.
+            </li>
+            <li data-ar="التأكد من أن مستوى صوت المنبهات في الهاتف كافٍ ومسموع وعدم وضع الهاتف في وضع الصامت التام بدون استثناء المنبهات." data-en="Ensure that device alarm audio volume is adequately audible and not muted without alarm exceptions.">
+              التأكد من أن مستوى صوت المنبهات في الهاتف كافٍ ومسموع وعدم وضع الهاتف في وضع الصامت التام بدون استثناء المنبهات.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Section 4: Limitation of Liability -->
+      <section class="legal-section">
+        <h2 data-ar="4. إخلاء المسؤولية وحدود الالتزام" data-en="4. Disclaimer of Warranties & Limitation of Liability">4. إخلاء المسؤولية وحدود الالتزام</h2>
+        <p data-ar="التطبيق يُقدَّم 'كما هو' و'بحسب التوفر' كأداة مساعدة رقمية. المسؤولية النهائية عن الحضور والانصراف وتسجيل البصمة في مقر عملك تقع كاملةً على عاتقك الشخصي. نحن لا نتحمل أي مسؤولية قانونية أو مالية تجاه أي جهة عمل عن:" data-en="The application is provided on an 'AS IS' and 'AS AVAILABLE' basis as an auxiliary reminder tool. The ultimate responsibility for workplace punctuality and punch-clock registration remains solely with you. We are not liable for:">
+          التطبيق يُقدَّم 'كما هو' و'بحسب التوفر' كأداة مساعدة رقمية. المسؤولية النهائية عن الحضور والانصراف وتسجيل البصمة في مقر عملك تقع كاملةً على عاتقك الشخصي. نحن لا نتحمل أي مسؤولية قانونية أو مالية تجاه أي جهة عمل عن:
+        </p>
+        <ul>
+          <li data-ar="فوات موعد البصمة بسبب نفاد بطارية الهاتف، أو إيقاف تشغيل الجهاز، أو كتم صوت الهاتف من قبل المستخدم." data-en="Missed punch clocks due to drained battery, device shutdown, or device silenced by user.">
+            فوات موعد البصمة بسبب نفاد بطارية الهاتف، أو إيقاف تشغيل الجهاز، أو كتم صوت الهاتف من قبل المستخدم.
+          </li>
+          <li data-ar="أي خصومات وظيفية أو جزاءات أو عقوبات إدارية تفرضها جهة العمل." data-en="Any employer payroll deductions, administrative penalties, or employment disciplinary actions.">
+            أي خصومات وظيفية أو جزاءات أو عقوبات إدارية تفرضها جهة العمل.
+          </li>
+          <li data-ar="أخطاء إدخال المستخدم لمواعيد الدخول أو اختيار وردية خاطئة أثناء إنشاء الجدول." data-en="User configuration errors, such as entering incorrect shift times or picking the wrong shift model.">
+            أخطاء إدخال المستخدم لمواعيد الدخول أو اختيار وردية خاطئة أثناء إنشاء الجدول.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 5: Trial & Subscriptions -->
+      <section class="legal-section">
+        <h2 data-ar="5. الباقة التجريبية المجانية وباقات الاشتراك" data-en="5. Free Trial & Subscriptions">5. الباقة التجريبية المجانية وباقات الاشتراك</h2>
+        <ul>
+          <li data-ar="<strong>الفترة التجريبية (60 يوماً):</strong> يحصل كل مستخدم وجهاز جديد على فترة تجريبية مجانية كاملة الميزات مدتها 60 يوماً تبدأ من أول تسجيل." data-en="<strong>Free Trial (60 Days):</strong> Each new user and device receives a 60-day fully functional free trial starting from their initial sign-in.">
+            <strong>الفترة التجريبية (60 يوماً):</strong> يحصل كل مستخدم وجهاز جديد على فترة تجريبية مجانية كاملة الميزات مدتها 60 يوماً تبدأ من أول تسجيل.
+          </li>
+          <li data-ar="<strong>سياسة منع التكرار والتلاعب:</strong> يُسجّل تاريخ بدء التجربة في سجل موحد دائم مرتبط بمعرّف الجهاز وبريد المستخدم. حذف الحساب وإعادة إنشائه أو إعادة تثبيت التطبيق على نفس الجهاز لن يعيد ضبط فترة الـ 60 يوماً." data-en="<strong>Anti-Fraud Trial Policy:</strong> Trial start dates are recorded in an immutable ledger keyed to device identifier and email. Recreating an account or reinstalling the app on the same device will NOT reset the 60-day trial period.">
+            <strong>سياسة منع التكرار والتلاعب:</strong> يُسجّل تاريخ بدء التجربة في سجل موحد دائم مرتبط بمعرّف الجهاز وبريد المستخدم. حذف الحساب وإعادة إنشائه أو إعادة تثبيت التطبيق على نفس الجهاز لن يعيد ضبط فترة الـ 60 يوماً.
+          </li>
+          <li data-ar="<strong>الاشتراكات المدفوعة:</strong> بعد انتهاء الفترة التجريبية، يتطلب استمرار ضبط الجداول وتلقي التنبيهات الترقية إلى إحدى الباقات (شهري، سنوي، أو ترخيص دائم مدى الحياة)." data-en="<strong>Paid Upgrades:</strong> Upon trial expiration, active schedule generation and alarm services require upgrading to an active plan (Monthly, Annual, or Lifetime License).">
+            <strong>الاشتراكات المدفوعة:</strong> بعد انتهاء الفترة التجريبية، يتطلب استمرار ضبط الجداول وتلقي التنبيهات الترقية إلى إحدى الباقات (شهري، سنوي، أو ترخيص دائم مدى الحياة).
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 6: Single Device Policy -->
+      <section class="legal-section">
+        <h2 data-ar="6. أمان الحساب وسياسة الجهاز الواحد" data-en="6. Account Security & Single Device Policy">6. أمان الحساب وسياسة الجهاز الواحد</h2>
+        <p data-ar="لضمان أمان جداول المواعيد ودقة التنبيهات ومنع التضارب بين الهواتف، يُسمح بجهاز نشط واحد فقط في نفس الوقت لكل حساب. تسجيل الدخول من جهاز جديد سينقل الصلاحية النشطة إليه تلقائياً." data-en="To ensure schedule integrity and prevent conflicting alarms across multiple phones, each account is permitted one active device session at a time. Signing in on a new device transfers the active session automatically.">
+          لضمان أمان جداول المواعيد ودقة التنبيهات ومنع التضارب بين الهواتف، يُسمح بجهاز نشط واحد فقط في نفس الوقت لكل حساب. تسجيل الدخول من جهاز جديد سينقل الصلاحية النشطة إليه تلقائياً.
+        </p>
+      </section>
+
+      <!-- Section 7: Termination & Account Deletion -->
+      <section class="legal-section">
+        <h2 data-ar="7. إنهاء الاستخدام وحذف الحساب" data-en="7. Termination & Account Deletion">7. إنهاء الاستخدام وحذف الحساب</h2>
+        <p data-ar="يحق لك في أي وقت التوقف عن استخدام التطبيق أو حذف حسابك نهائياً بضغطة واحدة من داخل شاشة الإعدادات في التطبيق (الإعدادات ⚙️ ➔ الحساب والأمان ➔ حذف الحساب نهائياً). نحتفظ بالحق في تعليق أو إنهاء الحسابات التي تنتهك هذه الشروط أو تحاول التلاعب بالبنية التحتية." data-en="You may stop using the app at any time or permanently delete your account directly inside the app (Settings ⚙️ ➔ Account & Security ➔ Delete Account Permanently). We reserve the right to suspend or terminate accounts that breach these terms or abuse cloud infrastructure.">
+          يحق لك في أي وقت التوقف عن استخدام التطبيق أو حذف حسابك نهائياً بضغطة واحدة من داخل شاشة الإعدادات في التطبيق (الإعدادات ⚙️ ➔ الحساب والأمان ➔ حذف الحساب نهائياً). نحتفظ بالحق في تعليق أو إنهاء الحسابات التي تنتهك هذه الشروط أو تحاول التلاعب بالبنية التحتية.
+        </p>
+      </section>
+
+      <!-- Section 8: Intellectual Property -->
+      <section class="legal-section">
+        <h2 data-ar="8. الملكية الفكرية" data-en="8. Intellectual Property">8. الملكية الفكرية</h2>
+        <p data-ar="جميع حقوق الملكية الفكرية، التصاميم، الكود المصدري، الشعارات، وأنظمة الجدولة الرياضية في التطبيق والموقع هي ملك حصري لمطوري تطبيق منبه البصمة. يُحظر تماماً تفكيك التطبيق (Reverse Engineering) أو نسخ تصاميمه أو محاولة استغلال واجهات البرمجة بشكل غير قانوني." data-en="All intellectual property rights, trademarks, UI designs, and schedule calculation engines in the app and website are the exclusive property of Fingerprint Reminder. Reverse engineering, decompiling, or unauthorized API exploitation is strictly prohibited.">
+          جميع حقوق الملكية الفكرية، التصاميم، الكود المصدري، الشعارات، وأنظمة الجدولة الرياضية في التطبيق والموقع هي ملك حصري لمطوري تطبيق منبه البصمة. يُحظر تماماً تفكيك التطبيق (Reverse Engineering) أو نسخ تصاميمه أو محاولة استغلال واجهات البرمجة بشكل غير قانوني.
+        </p>
+      </section>
+
+      <!-- Section 9: Governing Law & Updates -->
+      <section class="legal-section">
+        <h2 data-ar="9. تعديل الشروط والتواصل" data-en="9. Updates & Contact Information">9. تعديل الشروط والتواصل</h2>
+        <p data-ar="قد نقوم بتحديث هذه الشروط من حين لآخر لتعكس التحسينات في ميزات التطبيق أو القوانين المعمول بها. سيتم نشر النسخة المحدثة هنا مع تاريخ السريان." data-en="We may revise these Terms of Service periodically to reflect app enhancements or statutory updates. The updated terms will always be published on this page.">
+          قد نقوم بتحديث هذه الشروط من حين لآخر لتعكس التحسينات في ميزات التطبيق أو القوانين المعمول بها. سيتم نشر النسخة المحدثة هنا مع تاريخ السريان.
+        </p>
+        <p data-ar="لأي استفسارات قانونية أو فنية، يسعدنا تواصلكم عبر البريد المعتمد:" data-en="For any legal or technical questions, please contact us directly:">
+          لأي استفسارات قانونية أو فنية، يسعدنا تواصلكم عبر البريد المعتمد:
+        </p>
+        <a href="mailto:support@fingerprintreminder.online" class="contact-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>support@fingerprintreminder.online</span>
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <img src="logo.svg" style="width:26px;height:26px;border-radius:6px;" alt="logo">
+        <span>© 2026 fingerprintreminder.online - جميع الحقوق محفوظة</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="terms.html" style="color:var(--neon-accent);" data-ar="شروط الاستخدام" data-en="Terms of Service">شروط الاستخدام</a>
+        <a href="privacy.html" data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let currentLang = 'ar';
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      applyLanguage(currentLang);
+    }
+
+    function applyLanguage(lang) {
+      const isArabic = lang === 'ar';
+      document.documentElement.lang = isArabic ? 'ar' : 'en';
+      document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+      document.body.classList.toggle('ltr', !isArabic);
+
+      document.getElementById('langLabel').textContent = isArabic ? 'English' : 'عربي';
+
+      document.querySelectorAll('[data-ar]').forEach(el => {
+        const text = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+        if (text) {
+          if (text.includes('<') && text.includes('>')) {
+            el.innerHTML = text;
+          } else {
+            el.textContent = text;
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
