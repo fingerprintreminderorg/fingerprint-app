@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.aistudio.fingerprintreminder.ktzmsa",
+      "sha256_cert_fingerprint_list": [
+        "57:DB:86:AA:EF:E3:FD:5C:89:26:91:49:A9:EA:4A:EA:28:7F:21:20:63:AC:A7:E3:71:3F:20:6B:4C:D2:BD:EB"
+      ]
+    }
+  }
+]
