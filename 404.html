@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Fingerprint Reminder</title>
+  <script>
+    (function() {
+      try {
+        var path = window.location.pathname || '';
+        var hash = window.location.hash || '';
+        var search = window.location.search || '';
+        var h = new URLSearchParams(hash.replace(/^#/, ''));
+        var q = new URLSearchParams(search.replace(/^\?/, ''));
+
+        if (path.indexOf('welcome') !== -1) {
+          var hasAuthSequence = h.has('access_token') || q.has('access_token') ||
+                                h.has('refresh_token') || q.has('refresh_token') ||
+                                q.has('code') || h.has('code') ||
+                                q.has('token_hash') || h.has('token_hash') ||
+                                h.has('type') || q.has('type') ||
+                                h.has('error') || q.has('error');
+
+          var hasPaymentSequence = q.get('status') === 'success' ||
+                                   q.has('plan_type') ||
+                                   q.has('session_id') ||
+                                   q.get('payment') === 'success';
+
+          var hasEmailSequence = q.has('action') || q.has('from') || q.has('source');
+
+          if (hasAuthSequence || hasPaymentSequence || hasEmailSequence) {
+            window.location.replace('/welcome.html' + search + hash);
+            return;
+          } else {
+            window.location.replace('/index.html');
+            return;
+          }
+        }
+
+        if (path.indexOf('reset-password') !== -1) {
+          var hasResetSequence = h.has('access_token') || q.has('access_token') ||
+                                 h.has('refresh_token') || q.has('refresh_token') ||
+                                 q.has('code') || h.has('code') ||
+                                 q.has('token_hash') || h.has('token_hash') ||
+                                 h.get('type') === 'recovery' || q.get('type') === 'recovery' ||
+                                 h.has('type') || q.has('type') ||
+                                 h.has('error') || q.has('error') ||
+                                 h.has('error_description') || q.has('error_description');
+
+          if (hasResetSequence) {
+            window.location.replace('/reset-password.html' + search + hash);
+            return;
+          } else {
+            window.location.replace('/index.html');
+            return;
+          }
+        }
+
+        if (path.indexOf('about') !== -1) {
+          window.location.replace('/about.html' + search + hash);
+          return;
+        }
+
+        if (path.indexOf('contact') !== -1) {
+          window.location.replace('/contact.html' + search + hash);
+          return;
+        }
+
+        if (path.indexOf('terms') !== -1) {
+          window.location.replace('/terms.html' + search + hash);
+          return;
+        }
+
+        if (path.indexOf('privacy') !== -1) {
+          window.location.replace('/privacy.html' + search + hash);
+          return;
+        }
+
+        // Default redirect for any other missing route
+        window.location.replace('/index.html');
+      } catch (e) {
+        window.location.replace('/index.html');
+      }
+    })();
+  </script>
+</head>
+<body></body>
+</html>
