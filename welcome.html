@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تم تأكيد الحساب بنجاح | Welcome to Fingerprint Reminder</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html:not(.verified-access) body {
+      display: none !important;
+    }
+  </style>
+  <script>
+    (function() {
+      try {
+        var rawHash = window.location.hash || '';
+        var rawSearch = window.location.search || '';
+        var h = new URLSearchParams(rawHash.replace(/^#/, ''));
+        var q = new URLSearchParams(rawSearch.replace(/^\?/, ''));
+
+        // Reject any error redirects or bare copy-pasted URLs immediately
+        if (h.has('error') || q.has('error') || h.has('error_code') || q.has('error_code')) {
+          window.location.replace('index.html');
+          return;
+        }
+
+        var accessToken = h.get('access_token') || q.get('access_token') || '';
+        var refreshToken = h.get('refresh_token') || q.get('refresh_token') || '';
+        var code = q.get('code') || h.get('code') || '';
+        var tokenHash = q.get('token_hash') || h.get('token_hash') || '';
+
+        // 1. Legitimate email confirmation token (must contain an actual cryptographic token)
+        var hasValidAuthToken = (accessToken.length >= 20) || (code.length >= 10) || (tokenHash.length >= 16);
+
+        // 2. Legitimate XPay payment redirect (must include valid plan_type and user_id)
+        var status = (q.get('status') || q.get('payment') || '').toLowerCase();
+        var planType = (q.get('plan_type') || '').toLowerCase();
+        var userId = q.get('user_id') || '';
+        var sessionId = q.get('session_id') || q.get('transaction_id') || '';
+        var hasValidPayment = (status === 'success' || planType === 'monthly' || planType === 'yearly' || planType === 'lifetime') &&
+                              userId.length >= 10;
+
+        if (!hasValidAuthToken && !hasValidPayment) {
+          window.location.replace('index.html');
+          return;
+        }
+
+        // One-time token consumption check: prevents re-opening via copy-pasted email/payment URL
+        var tokenSignature = (accessToken || code || tokenHash || (userId + '_' + planType + '_' + sessionId)).slice(-36);
+        var storageKey = 'fp_welcome_consumed_' + tokenSignature;
+        if (tokenSignature && localStorage.getItem(storageKey)) {
+          window.location.replace('index.html');
+          return;
+        }
+        if (tokenSignature) {
+          localStorage.setItem(storageKey, String(Date.now()));
+        }
+
+        // Preserve parameters in memory for deep-link handoff, then immediately scrub the browser URL bar
+        // so copying the URL from the browser address bar only copies a bare URL (which redirects to index.html)
+        window.__WELCOME_INITIAL_HASH__ = rawHash;
+        window.__WELCOME_INITIAL_SEARCH__ = rawSearch;
+        window.__WELCOME_ACCESS_TOKEN__ = accessToken;
+        window.__WELCOME_REFRESH_TOKEN__ = refreshToken;
+        window.__WELCOME_HAS_PAYMENT__ = hasValidPayment;
+        window.history.replaceState(null, document.title, window.location.pathname);
+
+        if (hasValidPayment) {
+          document.documentElement.classList.add('verified-access');
+        } else if (accessToken.length >= 20) {
+          // Verify the access_token live against Supabase Auth so fabricated URLs never open the page
+          var anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhud3JzeG93ZHJ3bW9vc3lqYnJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU5NDM3ODgsImV4cCI6MjEwMTUxOTc4OH0.aSf2oslOt8QKBjX7G7wbUONKiVa3ro4dZSV2h3n_o64";
+          fetch("https://hnwrsxowdrwmoosyjbro.supabase.co/auth/v1/user", {
+            headers: {
+              "apikey": anonKey,
+              "Authorization": "Bearer " + accessToken
+            }
+          }).then(function(res) {
+            if (res.ok) {
+              document.documentElement.classList.add('verified-access');
+            } else {
+              window.location.replace('index.html');
+            }
+          }).catch(function() {
+            window.location.replace('index.html');
+          });
+        } else {
+          // PKCE code or token_hash from email confirmation
+          document.documentElement.classList.add('verified-access');
+        }
+      } catch (e) {
+        window.location.replace('index.html');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Minimal Header -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="logo.svg" alt="Logo" class="brand-logo">
+        <div class="brand-title">منبه البصمة الذكي</div>
+      </a>
+      <a href="index.html" class="btn-nav-download">الرئيسية</a>
+    </div>
+  </header>
+
+  <div class="auth-page-wrapper">
+    <div class="auth-card">
+      <div class="auth-icon-circle">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <h1>أهلاً بك معنا! تم تأكيد بريدك بنجاح ✨</h1>
+      <p>
+        شكراً لتأكيد بريدك الإلكتروني. حسابك الآن مفعل بالكامل وجاهز للاستخدام ومزامنة جدول البصمات في أي وقت.
+      </p>
+
+      <div class="countdown-box" id="redirectStatus">
+        سيتم فتح تطبيق منبه البصمة تلقائياً خلال <span id="countdown">3</span> ثوانٍ...
+      </div>
+
+      <div style="margin-top:28px; display:flex; flex-direction:column; gap:12px;">
+        <!-- Deep Link Intent Button -->
+        <button type="button" id="openAppBtn" onclick="openApp()" class="btn-submit" style="display:flex; align-items:center; justify-content:center; gap:8px; width:100%; border:none; cursor:pointer;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+          </svg>
+          فتح تطبيق منبه البصمة الآن
+        </button>
+
+        <a href="https://github.com/fingerprintreminderorg/fingerprint-app/releases/latest/download/fingerprint-reminder.apk" class="lang-btn" style="text-decoration:none; justify-content:center; padding:12px;">
+          لم تقم بتحميل التطبيق بعد؟ اضغط هنا للتحميل المباشر
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let secondsLeft = 3;
+    const countdownEl = document.getElementById('countdown');
+    const redirectStatusEl = document.getElementById('redirectStatus');
+
+    // Read preserved initial parameters (address bar was already scrubbed for security)
+    const hash = window.__WELCOME_INITIAL_HASH__ || "";
+    const search = window.__WELCOME_INITIAL_SEARCH__ || "";
+    const urlParams = new URLSearchParams(search.replace(/^\?/, ''));
+    const isPaymentSuccess = Boolean(window.__WELCOME_HAS_PAYMENT__);
+    const userId = urlParams.get('user_id') || '';
+    const planType = urlParams.get('plan_type') || 'monthly';
+    const sessionId = urlParams.get('session_id') || urlParams.get('transaction_id') || '';
+
+    if (isPaymentSuccess) {
+      const h1 = document.querySelector('h1');
+      if (h1) h1.textContent = "🎉 تم الدفع وتفعيل الاشتراك بنجاح!";
+      const p = document.querySelector('.auth-card > p');
+      const normalizedPlan = planType.toLowerCase();
+      const planName = normalizedPlan === 'lifetime'
+        ? 'باقة مدى الحياة (Lifetime)'
+        : normalizedPlan === 'yearly'
+          ? 'باقة VIP السنوية'
+          : 'باقة Pro (50 ج.م)';
+      if (p) p.textContent = `تهانينا! تم تفعيل ${planName} بنجاح. كافة مزايا التطبيق وجداول التنبيه مفتوحة لك بالكامل الآن.`;
+
+      // Call handle-payment-webhook with Authorization header to activate DB
+      const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhud3JzeG93ZHJ3bW9vc3lqYnJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU5NDM3ODgsImV4cCI6MjEwMTUxOTc4OH0.aSf2oslOt8QKBjX7G7wbUONKiVa3ro4dZSV2h3n_o64";
+      fetch(`https://hnwrsxowdrwmoosyjbro.supabase.co/functions/v1/handle-payment-webhook?status=success&user_id=${encodeURIComponent(userId)}&plan_type=${encodeURIComponent(planType)}&session_id=${encodeURIComponent(sessionId)}`, {
+        headers: {
+          "apikey": anonKey,
+          "Authorization": `Bearer ${anonKey}`
+        }
+      }).catch(err => console.warn("Webhook fetch notification:", err));
+    }
+
+    const rawParams = (hash.startsWith('#') ? hash.substring(1) : (search.startsWith('?') ? search.substring(1) : (hash || search)));
+    const queryPart = rawParams ? ("?" + rawParams) : "";
+    const customScheme = isPaymentSuccess 
+      ? `fingerprint://payment-success?status=success&user_id=${encodeURIComponent(userId)}&plan_type=${encodeURIComponent(planType)}&session_id=${encodeURIComponent(sessionId)}`
+      : ("fingerprint://auth/callback" + (rawParams ? ("#" + rawParams) : ""));
+    const androidIntent = isPaymentSuccess
+      ? `intent://payment-success?status=success&user_id=${encodeURIComponent(userId)}&plan_type=${encodeURIComponent(planType)}&session_id=${encodeURIComponent(sessionId)}#Intent;scheme=fingerprint;package=com.aistudio.fingerprintreminder.ktzmsa;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;end`
+      : ("intent://auth/callback" + queryPart + "#Intent;scheme=fingerprint;package=com.aistudio.fingerprintreminder.ktzmsa;end");
+
+    function openApp() {
+      const isAndroid = /android/i.test(navigator.userAgent);
+      if (isAndroid) {
+        window.location.href = androidIntent;
+      } else {
+        window.location.href = customScheme;
+      }
+    }
+
+    const timer = setInterval(() => {
+      if (!document.documentElement.classList.contains('verified-access')) return;
+      secondsLeft--;
+      if (countdownEl) {
+        countdownEl.textContent = secondsLeft;
+      }
+      if (secondsLeft <= 0) {
+        clearInterval(timer);
+        if (redirectStatusEl) {
+          redirectStatusEl.textContent = "جاري فتح التطبيق على هاتفك...";
+        }
+        openApp();
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
