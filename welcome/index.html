@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Fingerprint Reminder</title>
+  <style>html, body { display: none !important; background: #0D1412; }</style>
+  <script>
+    (function() {
+      try {
+        var hash = window.location.hash || '';
+        var search = window.location.search || '';
+        var h = new URLSearchParams(hash.replace(/^#/, ''));
+        var q = new URLSearchParams(search.replace(/^\?/, ''));
+
+        var accessToken = h.get('access_token') || q.get('access_token') || '';
+        var code = q.get('code') || h.get('code') || '';
+        var tokenHash = q.get('token_hash') || h.get('token_hash') || '';
+
+        var hasValidAuthToken = (accessToken.length >= 20) || (code.length >= 10) || (tokenHash.length >= 16);
+
+        var status = (q.get('status') || q.get('payment') || '').toLowerCase();
+        var planType = (q.get('plan_type') || '').toLowerCase();
+        var userId = q.get('user_id') || '';
+        var hasValidPayment = (status === 'success' || planType === 'monthly' || planType === 'yearly' || planType === 'lifetime') &&
+                              userId.length >= 10;
+
+        if (hasValidAuthToken || hasValidPayment) {
+          window.location.replace('../welcome.html' + search + hash);
+        } else {
+          window.location.replace('../index.html');
+        }
+      } catch (e) {
+        window.location.replace('../index.html');
+      }
+    })();
+  </script>
+</head>
+<body></body>
+</html>
